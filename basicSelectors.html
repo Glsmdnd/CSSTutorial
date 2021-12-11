@@ -6,8 +6,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Selectors</title>
     
+    <style>
+        
+/*genel seçiciler en tepeye örn tüm h1 ler ,özel seçiciler en aşağı yazılır örn id nin içindeki li nin içinde clas
+ayrıca yukarıdan aşağı okunduğu için aşağıya yazılan bir kod yukarıdaki ile aynı ise onu ezer ikincisi kalır
+style etiketi içinde örn bir clasın rengini değiştirdik fakat clasın olduğu yerde aşağıda inline olrk başka bir
+ renk verirsel inline olan style etiketin altında kaldığı için inline kod stle etiketi içindeki kodu ezer
+ ezmemesi için yukarıda styla ın için yazılan kodun değişmemesini istediğimiz alanına import yazarız */
+      
+/*tüm h1 leri seç*/
+        
+       /*  h1{
+            color: coral;
+            background-color: darkgrey;
+        }
+
+ /* tüm p leri seç
+        p{
+            color:coral;
+            background-color: darkgrey;
+        } */
+        
+/*tüm h1 ve p leri tek selectorda seçmek için  */
+        h1,p{
+            color: rgb(206, 160, 8);
+            background-color: rgb(12, 12, 12);
+        }
+    
+        /*peki sadece belirli bir şeyi (id ye göre seçim)
+        id si logo olan h1 i özellikle seçmek istersek*/
+        #logo{
+            color:darkkhaki;
+            background-color: darkorchid;
+        }
+
+        /*peki sadece belirli bir şeyi (clasa a göre seçim)
+        class ının içinde info olan p yi özellikle seçmek istersek*/
+
+        .info{
+            color:rgb(240, 138, 104);
+            background-color: darkseagreen;
+
+        }
+
+        /*peki sadece id'si logo olanlar ve classları ı lead olanı almasını istersek*/
+        #logo,.lead{
+            color: rgb(255, 20, 130);
+            background-color: rgb(231, 207, 73);
+        }
+
+         /*peki sadece id'si paragraf1 olan ve class ı lead olanı almasını istersek*/
+         #paragraf1.lead{
+             color: green;
+             background-color: greenyellow;
+         }
+         /*sayfadaki tüm a etiketli linkleirn alt çizgilerini kaldır*/
+         a{
+             text-decoration-line: none;
+            color:lightblue;
+         }
+          /*peki ya sadece ul in içindeki li nin içindeki a etiketlerini etkilemek istersek*/
+          ul li a{
+            text-decoration-line:underline;
+              color:rgb(8, 104, 80);
+          }
+           /*peki class ı info olan etiketlerin altındaki spanlar*/
+           .info span{
+               color:red;
+               font-style: italic;
+           }
+           /*peki class ı info olanın altındaki clası primary olan*/
+           
+            .info .primary{
+                color:black;
+            }
+            /* sayfadaki tüm etiketleri kapsayan hepsini değiştirebilme yetisine sahip evrensel işaret*/
+            *{
+                font-size: 30px;
+            }
+    </style>
+    
 </head>
 <body>
+    <header>
     <h1>Header 1</h1>
+    <h1 id="logo">Logo</h1>
+    <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Services</a></li>
+    </ul>
+    </header>
+    <h1> Header 2 </h1>
+    <p id="paragraf1" class="lead info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam praesentium repellendus at. Iure, quibusdam
+         cumque distinctio quae quis eaque dolorum esse aut, deserunt temporibus ullam!
+    </p>
+    <p class="info">
+        Lorem ipsum <span class="primary">dolor</span> sit amet consectetur adipisicing elit. Veniam praesentium repellendus at. Iure, quibusdam
+         cumque distinctio quae quis eaque dolorum esse aut, deserunt temporibus ullam!
+    </p>
+    <p class="info">
+        Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit. Veniam praesentium repellendus at. Iure, quibusdam
+         cumque distinctio quae quis eaque dolorum esse aut, deserunt temporibus ullam!
+    </p>
+    <p>Test Paragraph</p>
+    <a href="#">Home</a>
 </body>
 </html>
