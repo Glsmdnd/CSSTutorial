@@ -12,12 +12,17 @@
 ayrıca yukarıdan aşağı okunduğu için aşağıya yazılan bir kod yukarıdaki ile aynı ise onu ezer ikincisi kalır
 style etiketi içinde örn bir clasın rengini değiştirdik fakat clasın olduğu yerde aşağıda inline olrk başka bir
  renk verirsel inline olan style etiketin altında kaldığı için inline kod stle etiketi içindeki kodu ezer
- ezmemesi için yukarıda styla ın için yazılan kodun değişmemesini istediğimiz alanına import yazarız */
+ ezmemesi için yukarıda styla ın için yazılan kodun değişmemesini istediğimiz alanına import yazarız 
+ sayfadaki stle ları kaldırıp dışardaki iki dosyadan da (h1 leri etkileyen kod barındıran) çağıralım
+ <link rel="stylesheet" href="css/style1.css">
+ <link rel="stylesheet" href="css/style2.css">
+ alttaki üsttekini ezer
+ */
       
 /*tüm h1 leri seç*/
         
        /*  h1{
-            color: coral;
+            color: coral !important;
             background-color: darkgrey;
         }
 

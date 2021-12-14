@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width-height-maxwidth</title>
+    <style>
+        #box1{
+            background-color: turquoise;
+            /* sayfa yapısı nekadar küçülürse o oranda küçülür
+              width:50%; yarısı kadar küçülürse yarısı kadar divi küçültür*/
+            width:50%;
+            height:100px;
+        }
+        #box2{
+            background-color: rgb(224, 64, 189);
+            /* box2 box1 in içinde olduğundan box1 in %50 sini kaplar*/
+            width:50%;
+            height:50px;
+        }
+        #box3{
+            background-color: rgb(224, 187, 64);
+            height:50px;
+            /*  max-width: 500px;
+             veridğimiz için sayfa küçülğünde genişliği sayfa kadar sabit kalır büyütürsek büyümez 500 de kalır
+             özellikle responsive tasarımlarda kullanılır 
+             */
+            max-width: 500px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2"></div>
+
+    </div>
+    <div id="box3">
+
+    </div>
+</body>
+</html>

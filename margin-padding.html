@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin-Padding</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #box-1{
+            /* tek satırda yazarken saat yönüne döner
+            margin-top: 50px;
+            margin-left: 60px;
+            margin-right: 60px;
+            margin-bottom: 50px;
+            tek satırda yazarken saat yönüne döner
+            margin:50px 60px 50px 60px;
+            eğer üst alt, sağ sol aynıysa sıralama
+            top-bottom,right-left şeklinde olur
+
+            */
+            margin:50px 60px;
+           
+        }
+        #box-2{
+            background-color: cornflowerblue;
+            /*tarayıcının %50 sini kaplasın ve herzaman ortada dursun*/
+            width: 50%;
+           /*  margin-left: auto;
+            margin-right: auto; 
+            yerine*/
+            margin:0 auto;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box-1">
+        ghfasdfghyujıkopğşlkjbvcxxcvb sdfghjklşlkjbvcvb  dfghjklökmnbvcvbn
+    </div>
+    normalde body etiketi bir block element ve biz bu sayfayı browserda aktif ettiğimizde otomatik
+    olarak defoult olarak bize bu sayfa margin boşlukları ile yüklenir örneği şuan bu yazdığım yazı 
+    yukarıdan aşağıdan 8px lik margin boşlukları ile yayınlanır.biz sayfalar otomatik olarak gelmesin
+    diye reset css yapabiliriz bunun için universal işareti kullanırız
+    <div id="box-2">
+        yazıyı sayfada ortalamak, sağ ve soldan otomatik eşit boşluklar için margin-left: auto; margin-right: auto;
+    </div>
+</body>
+</html>

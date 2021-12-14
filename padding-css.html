@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padding-Css</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            /*hepsi için burada box-sizing:border-box;veririz*/
+         }
+         div.box-1{
+             
+             width: 500px;
+             height: 200px;
+             border: 5px solid black;
+             /* top right bottom left her birim faklıysa saat yönüne
+             padding: 20px 40 px 30 px 15 px;
+             eşit boşluklu ise aşağıdaki gibi*/
+             padding: 20px;
+                /*burada content genişliği+border(5*2=10)+padding(20*2)
+                                500    +      10      +  40=550px */
+            
+         }
+         div.box-2{
+            box-sizing:border-box;
+             width: 500px;
+             height: 200px;
+             border: 5px solid black;
+             padding: 20px;
+             /*burada content genişliği+border(5*2=10)+padding(20*2)
+                                450    +      10      +  40=500px    
+            border-sizing özelliği ile verilen padding ve border alanlarını content alanı olan 500 e dahil eder*/
+         }
+         div.box-3{
+            box-sizing:border-box;
+             width: 500px;
+             height: 200px;
+             border: 5px solid black;
+             padding: 20px;
+             /*burada content paddingler div ikiyle farklı olsada widthleri aynı olduğundan ve box size
+             özlliği sayesinde iki kutu boyu eşit olr*/
+         }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box-1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, dicta.
+    </div>
+    <div class="box-2">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, dicta. 
+        450cont+(borderlardan 10 geld,panndinden40)=500 oldu
+    </div>
+    <div class="box-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, dicta.
+</body>
+</html>

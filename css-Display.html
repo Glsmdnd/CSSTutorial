@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Özelliği</title>
+    <!--
+    /* bu özellik sayesinde div ler blok element bunlara genişlik ve yükseklik verebilirsin 
+    div { display: block;} olrk f12 ile görünür
+     link özelliği ise inline özelliktir yazı alanı kadar alan kaplarlar
+     fakat bazı durumlarda biz inline lementlerin block elementler gibi davranmasını isteriz
+     yani onlara blok elementleri gibi height ve width vermek isteriz bu yüzden display özelliğini
+     inline-block özellği yaparız buda hem block hem inline özelliğinin bileşkesi olarak
+     kullanırız örneğin bir link elementi inline özellikte fakat contenti otamatik olrk yazı kadar alan kaplar
+     oysa kullanıcı deneyimi olrk sağına soluna ksıacası çapı kadar bile alanada tıklamış olabilir ve link çalışmaz
+     çalışmaıs için linkin display ini inline-block verdikten sonra çapı için genişlik ve yükseklik verebilirz*/  -->
+     <style>
+         .box{
+             width: 50%;
+             height: 100px;
+         }
+         .box1{
+             background-color:blue;
+         }
+         .box2{
+             background-color: tomato;
+         }
+         #test-link{
+             display: inline-block;
+             width: 100px;
+             height: 100px;
+             background-color: violet;
+         }
+     </style>
+
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <a href="#" id="test-link">Linkkkk</a>
+    deneme inline block özelliğinden sonra inline elementmiş gibi
+    content yanından başladı
+</body>
+</html>
