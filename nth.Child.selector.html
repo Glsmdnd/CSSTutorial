@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth.Child.selector</title>
+    <style>
+        ul{
+            font-size: 1.5em;
+            list-style-type:none;
+        }
+        /* n ve b başlangıçta 0 dı.0.cı çocuk yok index 1 den başlar n bir artarsa yeni değer 2*n den=2 olucak:
+        n sırasıyla 0,2,4,6,8,... çift sayılarda indexlerde listede devam eder */
+        ul li:nth-child(2n){
+            color:red;
+        }
+        ul li:nth-child(2n+1){
+            color:rosybrown;
+        }
+        /*4.çocuk ve sonrasını seç*/
+        ul li:nth-child(n+4){
+            background-color:rgb(235, 4, 4);
+        }
+        /* p{
+            font-size: 1.5em;
+        }
+        p:nth-child(1){
+            color: salmon;
+        }
+        p:first-child{
+            background-color: seagreen;
+        }
+        p:nth-child(3){
+            font-size: 13px;
+        }
+      p:last-child{
+          
+      }
+      p:nth-child(4)
+      {
+          color: skyblue;
+      } */
+
+      /*sadece çift çocukları seç 2-4(even)
+      bunların dışında (an+b=) formülünde değer verilmemiş ise n ve b defoult olrk 0 dan başlar */
+      p:nth-child(even){
+background-color: tomato;
+      }
+      p:nth-child(odd)
+      {
+          color: yellowgreen;
+      }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+        <li>Element</li>
+    </ul>
+    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, blanditiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, blanditiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, blanditiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, blanditiis.</p>
+     -->
+</body>
+</html>

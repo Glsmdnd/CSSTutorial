@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font-em-rem2</title>
+    <style>
+        body{
+            font-size: 40px;
+        }
+        div{
+            font-size: 0.7em;
+        }
+         p{
+            font-size: 1rem;
+        }
+        span{
+            font-size: 1em;
+        }
+        .divclass{
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    p yi şimdi roota bağlayalım 16 px olan html tagine yani
+    div içindeki fontları bodye bağlayalım 40px
+    <div>
+        <p>
+            Div>pGülsüm otomatik olrk default 16 px gelecek  emle 16 oldu
+        </p>
+        <p>
+            <span>DİV>P>SPAN:bu yazıyı p tagından  defoult gelen 16 px den, stleda 24 e çekelim 
+                daha sonra em ile 16 oldu </span>
+        </p>
+        <p>
+            <p class="divclass">
+            span ve p nin üstünde bulunan div e font size olrk 9 px versekte içerdeki elemanları 
+            paragraf,spanları,clasların font 
+            etkileyemecektir </p>
+        </p>
+        peki şimdi html>body>div>(p-span-class) sıralamasında en alt segmentlerde olan span ve class ve p ın bir üstteki
+        parenti olan div ile aynı fontu almasını sağlamak için stlellarına 1 em koyduğumuzda div fontu ile aynı yazı fontuna
+        ulastıklarını gözlemleyelim.class ve span 24 px iken p ise 16 px,üst rootlarındaki div 9 old iin 9 ya gelecekelr
+        şimdi ise bu üçünün bağlı olduğu divi bir üst parenti olan body e emle bağlayalım ve onun fontunu aldıralım bu yazı 28 px
+    </div>
+</body>
+</html>
