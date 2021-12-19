@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TablesStyling</title>
+    <style>
+        th,td,tr,table{
+            border:1px solid black;
+            /*çizgiler arası boşluk kaldırır*/
+            border-collapse: collapse;
+        }
+        /*stilleme genelden özele şimdi tablo sayfanın %65 sini kaplasın*/
+        table{
+            width: 65%;
+            /*ortalamak için marginsağ sollalrı auto verelim*/
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 1.5em;
+        }
+        td,th{
+            padding: 10px;
+        }
+        thead tr{
+            background: rgb(17, 155, 51);
+            color: rgb(255, 255, 255);
+        }
+        tbody tr{
+            text-align: center;
+        }
+        tbody tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+        tbody td:hover{
+            background-color: #dddd;
+        }
+        
+    </style>
+</head>
+<body>
+   <table>
+       <thead>
+        <th>Adı</th>
+        <th>Departman</th>
+        <th>Maaş</th>
+       </thead>
+       <tbody>
+        <tr>
+           <td>Mustafa</td>
+           <td>It</td>
+           <td>5400</td>
+        </tr>
+        <tr>
+            <td>Gülsüm</td>
+            <td>E-ticaret</td>
+            <td>7400</td>
+         </tr>
+         <tr>
+            <td>Kamile</td>
+            <td>Satış</td>
+            <td>5400</td>
+         </tr>
+         <tr>
+            <td>Ahmet</td>
+            <td>Muhasebe</td>
+            <td>5400</td>
+         </tr>
+       </tbody>
+   </table>
+</body>
+</html>

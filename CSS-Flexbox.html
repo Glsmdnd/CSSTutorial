@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Flexbox</title>
+    <style>
+        /*flex direction coloumn da access değiştiğinden justified content ve align itemsın görevleri değişmiş olur
+        -normalde flex-direction: row; dayatay konumlandırmada justified content i kullanıyoruz,dikeyde elign itemsı
+        kullanırken flex direction:coloumnda bu özellikler yatayfa align itemsı ,dikeyde justified content i kullanıyoruz*/
+        *{
+            padding: 0px;
+            margin: 0px;
+            /*  box-sizing: border-box;içerik ve borderların toplamı 200px yapacak*/
+            box-sizing: border-box;
+        }
+        .box{
+            text-align: center;
+            background-color: #f2f2f2;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 10px;
+            
+        }
+        .container{
+            width: 75%;
+            /*hepsini aynı satıra sığdırmaya çalışma aşağıya at flex-wrap:wrap;*/
+            flex-wrap:wrap;
+            margin: 0 auto;
+            display: flex;
+            /* flex wrap özelliği defoult olrk no wrap gelir yani yataya sığdırmaya çalış
+            wrap olarak açarsak sığdırma alt satıra at border box özel bozma*/
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* justify-content özelliği ile içerdeki elemnaların arasındaki boşlukları, 
+            conteinerın neresinde duracağını belirler
+            -flex-end; ise sağdan bitimden ortaya doğru 
+            -center ile flexin ortasına taşınır kutular
+            -space between ile kutular arasında boşluk bırakır
+            -space around ve space evenly de farklı stilli boşlular bıralır*/
+            justify-content:flex-start;
+
+            /*align items:strech defoult özelliktir,
+            center verirsek dikeyde ortaya gelir box1 box2 boz3 gibi yanyana we ince bir height ile
+            -buna ek olarakjustify-content:center olarak ta verirsek hem yatayda he dikeyde ortalanmış olup
+            ekranın ortasına gelir.
+            -flex start ile containerin başlama noktasına gider sol(0,0)
+            -flex ends ile sol alttan başlar*/
+            align-items:flex-start;
+
+              /* senin min-height:600px;olsun conteiner taşarsa genişlet*/
+            min-height: 600px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+    <h1>Başlık1</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="box">
+    <h1>Başlık2</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<div class="box">
+    <h1>Başlık3</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+
+</div>
+</body>
+</html>

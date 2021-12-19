@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-relative&absolute</title>
+    <style>
+        /* position relative her hangi bir elementimizin(div,span vs) buluduğu yerden position vermemizi sağlar*/
+        /*kod sıramasında önce kırmızı sonra mavi olarak okunan kodlarda ikinci olrk okunduğu için mavi renkli kutu
+        kırmızı renkli kutunun üsütnde gibi görünür, arkadaki kırmızı kutunun öndeki mavinin önüne geçmesi için
+        3.boyut olan z indexini kullabiliriz
+        -z indexi ikisinede verilirse değeri büyük olan önde görünür*/
+       /*  .red{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+        .blue{
+            background-color: rgb(55, 0, 255);
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 5px;/* bulunduğu yerdne 5px sağa gider
+            top: 5px;
+        } */
+
+    /* absolut özelliği bir elementi kapsaycıya göre konumlandırmada kullanılır
+    bunun için bir other box dış kutu divinin içine bir inner box olmak üzere iki class tanımlayalım
+    amaş içteki kutunun dıştaki kutunun içinde konumlanması bunun için;
+     dıştaki kutunun position relative özelliğini açmalıyız açmassak içteki kutu dıştakinin çerçevesinde değil
+     bir üst parenti body nin çerçevesinde olaşır*
+     iç kutunun positionunu ise absolute veririz*/
+    /* .outher-box{
+        background-color: #a7a7a7;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        left: 100px;
+        top: 100px;
+    }
+    div.inner-box{
+        background-color: #a7a7;
+        width: 50px;
+        height: 50px;
+        position:absolute;
+        left: 20px;
+        top: 20px;
+    } */
+    span{
+        display:inline-block;
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        position: relative;
+        left: 100px;
+        z-index:-1;
+    }
+    </style>
+</head>
+<body>
+    <span></span>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit dignissimos ab nihil modi quaerat laborum?
+   <!--  <div class="outher-box">
+        <div class="inner-box"></div>
+    </div> -->
+    <!-- <div class="red"></div>
+    <div class="blue"></div> -->
+</body>
+</html>

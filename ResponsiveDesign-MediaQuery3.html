@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResponsiveDesign-MediaQuery3</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+           max-width: 1100px; 
+           margin:0 auto;
+           display: flex;
+           flex-wrap: wrap;
+        }
+        .box{
+            background-color: darkgray;
+            padding: 10px;
+            border:1px solid black;
+            width:25%;
+            align-items: center;
+           
+        }
+        @media(max-width:768px){
+            .box{
+                width: 50%;
+            }
+
+        }
+        @media(max-width:500px){
+            .box{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>başlık1</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, assumenda.</p>
+        </div>
+        <div class="box">
+            <h1>başlık2</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, assumenda.</p>
+        </div>
+        <div class="box">
+            <h1>başlık3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, assumenda.</p>
+        </div>
+        <div class="box">
+            <h1>başlık3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, assumenda.</p>
+        </div>
+    </div>
+</body>
+</html>
