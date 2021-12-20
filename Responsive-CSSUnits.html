@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-CSSUnits</title>
+    <!--Responsive units em,rem,%,vw,vh
+    -em :parentin fontsize ına göre orantısal unit.ör bizim divimizin font sizmiz 20px olsun
+    alttaki bir p ye :1,5 em verince 1,5em*20 parentin font size*1,5 kendi p elementimizin size oluyordu
+örn  defoult olrk p ye atanan font size 16px dir
+divin parenti body body defoult olrk 16 px dir 1,5 em verirsek divler =24 px olur
+p ye 1.5 em verirsek bir üst parenti olan div 24 olduğundan =36 px olacaktır
+/*font-size: 1,5rem padding dış parent olan dive göre oranlanmaz,p elementi 36 px olmuştu padding buna göre oranlanınca
+        54px olr
+rem-font-size: 1,5rem yapsaydık :15px olacaktı çünkü root parnti olan htmli baz alacaktı(html 10px olsun)
+-%:font-size: 20px; html tagınde  p{ font-size: 50%;} olunca p değeri 10px olcak
+-vw ekranin tamamının genişliği
+-vh ekranın tamamının yüksekliği
+
+-->
+<style>
+    /* div{
+       width: 40vw;
+        height: 10vh;
+        background-color: blue;
+        font-size: 1.5em;
+    }
+   /* html{
+        font-size: 10px;
+       font-size: 20px;
+    }
+    
+    p{
+        font-size: 50%;
+        font-size: 1,5em;
+        font-size: 1,5rem yapsaydık :15px olacaktı çünkü root parnti olan htmli baz alacaktı*/
+       /* padding: 1,5em;
+        burada padding dış parent olan dive göre oranlanmaz,p elementi 36 px olmuştu padding buna göre oranlanınca
+        54px olr
+    }*/
+
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .background{
+        background:url(./images/pexels-photo-10436443.jpeg) center center no-repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:rgb(185, 28, 28);
+        padding:10rem;
+    }
+    
+    h1{
+        margin-bottom: 1rem;/*16px*/
+        font-size: 3rem;/*48px*/
+    }
+    p{
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+    @media(max-width:500px){
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+    }
+</style>
+
+</head>
+<body>
+    
+    <div class="background">
+        <h1>Welcome the site</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, reiciendis!</p>
+    </div>
+</body>
+</html>
